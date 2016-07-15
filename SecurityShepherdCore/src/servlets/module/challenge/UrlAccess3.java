@@ -97,7 +97,7 @@ public class UrlAccess3 extends HttpServlet
 					{
 						log.debug("Super Admin Cookie detected");
 						// Get key and add it to the output
-						String userKey = Hash.generateUserSolution(Getter.getModuleResultFromHash(getServletContext().getRealPath(""), levelHash), (String)ses.getAttribute("userName"));
+						String userKey = Getter.getModuleResultFromHash(getServletContext().getRealPath(""), levelHash);
 						htmlOutput = "<h2 class='title'>" + bundle.getString("admin.superAdminClub") + "</h2>" +
 								"<p>" +
 								bundle.getString("admin.superAdminClub.keyMessage") + " " +

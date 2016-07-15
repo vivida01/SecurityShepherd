@@ -95,10 +95,7 @@ public class XssChallengeFour extends HttpServlet
 							htmlOutput = "<h2 class='title'>" + bundle.getString("result.wellDone") + "</h2>" +
 									"<p>" + bundle.getString("result.youDidIt") + "<br />" +
 									bundle.getString("result.resultKey") + " <a>" +
-										Hash.generateUserSolution(
-												Getter.getModuleResultFromHash(getServletContext().getRealPath(""), levelHash),
-											(String)ses.getAttribute("userName")
-										)
+												Getter.getModuleResultFromHash(getServletContext().getRealPath(""), levelHash)
 									+ "</a>";
 						}
 					}

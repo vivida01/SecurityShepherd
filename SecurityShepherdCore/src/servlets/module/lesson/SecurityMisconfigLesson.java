@@ -91,7 +91,7 @@ public class SecurityMisconfigLesson extends HttpServlet
 					log.debug("User has signed in as admin");
 					htmlOutput = "<h2 class='title'>" + bundle.getString("response.authSuccess") + "</h2><p>"
 							+ bundle.getString("result.youDidIt") + "<br><br>"
-							+ bundle.getString("result.key") + ": <a>" + Hash.generateUserSolution(levelResult, ses.getAttribute("userName").toString()) + "</a>";
+							+ bundle.getString("result.key") + ": <a>" + levelResult + "</a>";
 				}
 				log.debug("Outputting HTML");
 				out.write(htmlOutput);

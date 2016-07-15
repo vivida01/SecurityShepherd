@@ -84,8 +84,8 @@ extends HttpServlet
 						log.debug("XSS Lesson Completed!");
 						htmlOutput = "<h2 class='title'>" + bundle.getString("result.wellDone") + "</h2>" +
 								"<p>" + bundle.getString("result.youDidIt") + "<br />" +
-								"" + bundle.getString("result.resultKey") +
-								Hash.generateUserSolution(Getter.getModuleResultFromHash(getServletContext().getRealPath(""), levelHash), (String)ses.getAttribute("userName"));
+								"" + bundle.getString("result.resultKey") + "" +
+								Getter.getModuleResultFromHash(getServletContext().getRealPath(""), levelHash);
 					}
 					log.debug("Adding searchTerm to Html: " + searchTerm);
 					htmlOutput += "<h2 class='title'>" + bundle.getString("response.searchResults") + "</h2>" +

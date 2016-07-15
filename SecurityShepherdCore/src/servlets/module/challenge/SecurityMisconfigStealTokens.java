@@ -109,7 +109,7 @@ public class SecurityMisconfigStealTokens extends HttpServlet
 					{
 						log.debug("Valid Cookie of another User Dectected");
 						// Get key and add it to the output
-						String userKey = Hash.generateUserSolution(levelResult, (String)ses.getAttribute("userName"));
+						String userKey = levelResult;
 						htmlOutput = "<h2 class='title'>" + bundle.getString("securityMisconfig.servlet.stealTokens.complete") + "</h2>" +
 								"<p>" +
 								bundle.getString("securityMisconfig.servlet.stealTokens.youDidIt") + " " +

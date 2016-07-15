@@ -83,7 +83,7 @@ public class UrlAccess2Admin extends HttpServlet
 				
 				if(!tamperedRequest)
 				{
-					String userKey = Hash.generateUserSolution(levelResult, (String)ses.getAttribute("userName"));
+					String userKey = levelResult;
 					htmlOutput = "<h2 class='title'>" + bundle.getString("admin.clicked") + "</h2>"
 						+ "<p>" + bundle.getString("admin.keyMessage.1") + "<br /> "
 						+ "<a>" + userKey + "</a><br />" 

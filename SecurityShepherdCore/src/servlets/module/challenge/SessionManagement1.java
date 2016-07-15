@@ -92,11 +92,11 @@ public class SessionManagement1 extends HttpServlet
 					{
 						log.debug("Challenge Complete");
 						// Get key and add it to the output
-						String userKey = Hash.generateUserSolution(levelResult, (String)ses.getAttribute("userName"));
+						String userKey = levelResult;
 						htmlOutput = "<h2 class='title'>" + bundle.getString("response.adminClub") + "</h2>" +
 								"<p>" +
 								bundle.getString("response.welcomeAdmin") + 
-								"<a>" + userKey + "</a>" +
+								"<a> " + userKey + "</a>" +
 								"</p>";
 					}
 				}

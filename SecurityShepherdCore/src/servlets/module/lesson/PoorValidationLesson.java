@@ -76,7 +76,7 @@ public class PoorValidationLesson extends HttpServlet
 				if(userNumber < 0)
 				{
 					// Get key and add it to the output
-					String userKey = Hash.generateUserSolution(levelResult, (String)ses.getAttribute("userName"));
+					String userKey = levelResult;
 					log.debug("Negative Number Submitted");
 					htmlOutput = "<h2 class='title'>" + bundle.getString("result.validationBypassed") + "</h2><p>" + bundle.getString("result.youDidIt") + ". " + bundle.getString("result.resultKey") + ": <a>" + userKey + "</a></p>";
 				}

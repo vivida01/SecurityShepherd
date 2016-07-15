@@ -93,10 +93,8 @@ public class CsrfLesson extends HttpServlet
 						htmlOutput = "<h2 class='title'>" + bundle.getString("result.wellDone") + "</h2>" +
 								bundle.getString("result.youDidIt") + "<br />" +
 								bundle.getString("result.theKeyIs") + " <a>" + 
-									Hash.generateUserSolution(
-											Getter.getModuleResultFromHash(getServletContext().getRealPath(""), levelHash
-											), (String)ses.getAttribute("userName")
-									)
+											Getter.getModuleResultFromHash(getServletContext().getRealPath(""), levelHash)
+									
 								+
 								"</a>";
 					}

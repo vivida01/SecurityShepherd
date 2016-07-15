@@ -20,7 +20,7 @@ import dbProcs.Getter;
 import dbProcs.Setter;
 
 /**
- * Cross Site Request Forgery Challenge One - Does not return reslut key
+ * Cross Site Request Forgery Challenge One - Does not return result key
  * <br/><br/>
  * This file is part of the Security Shepherd Project.
  * 

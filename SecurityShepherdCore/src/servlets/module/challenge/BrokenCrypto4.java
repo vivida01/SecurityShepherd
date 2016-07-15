@@ -146,7 +146,7 @@ public class BrokenCrypto4 extends HttpServlet
 						+ "<p>" + bundle.getString("insecureCyrptoStorage.4.totalCost") + " <a><strong>$" + finalCost + "</strong></a></p>";
 				if (trollAmount > 0 && trollCost == 0)
 				{
-					htmlOutput += "<p>" + bundle.getString("insecureCyrptoStorage.4.freeTrolls") + " - " + Hash.generateUserSolution(Getter.getModuleResultFromHash(getServletContext().getRealPath(""), levelHash), (String)ses.getAttribute("userName")) + "</p>";
+					htmlOutput += "<p>" + bundle.getString("insecureCyrptoStorage.4.freeTrolls") + " - " + Getter.getModuleResultFromHash(getServletContext().getRealPath(""), levelHash) + "</p>";
 				}
 			}
 			catch(Exception e)

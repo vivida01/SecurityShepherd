@@ -95,7 +95,7 @@ public class SessionManagement4 extends HttpServlet
 					{
 						log.debug("Admin Session Detected: Challenge Complete");
 						// Get key and add it to the output
-						String userKey = Hash.generateUserSolution(levelResult, (String)ses.getAttribute("userName"));
+						String userKey = levelResult;
 						htmlOutput = "<h2 class='title'>" + bundle.getString("response.adminClub") + "</h2>" +
 								"<p>" +
 								bundle.getString("response.welcomeAdmin") + " " +

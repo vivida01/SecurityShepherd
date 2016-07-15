@@ -112,7 +112,7 @@ public class SessionManagement7SecretQuestion extends HttpServlet
 							{
 								log.debug("Correct Answer Submitted");
 								// Get key and add it to the output
-								String userKey = Hash.generateUserSolution(Getter.getModuleResultFromHash(ApplicationRoot, levelHash), (String)ses.getAttribute("userName"));
+								String userKey = Getter.getModuleResultFromHash(ApplicationRoot, levelHash);
 								htmlOutput = "<h2 class='title'>" + bundle.getString("response.welcome") + " " + encoder.encodeForHTML(rs.getString(1)) + "</h2>" +
 										"<p>" +
 										bundle.getString("response.resultKey") + " <a>" + userKey + "</a>" +

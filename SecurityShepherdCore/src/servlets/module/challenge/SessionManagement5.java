@@ -125,7 +125,7 @@ public class SessionManagement5 extends HttpServlet
 						{
 							log.debug("Successful Admin Login");
 							// Get key and add it to the output
-							String userKey = Hash.generateUserSolution(levelResult, (String)ses.getAttribute("userName"));
+							String userKey = levelResult;
 							
 							htmlOutput = "<h2 class='title'>" + bundle.getString("response.welcome") + " " + encoder.encodeForHTML(resultSet2.getString(1)) + "</h2>" +
 									"<p>" +

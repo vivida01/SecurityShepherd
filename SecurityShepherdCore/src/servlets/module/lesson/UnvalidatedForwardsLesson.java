@@ -134,10 +134,10 @@ public class UnvalidatedForwardsLesson extends HttpServlet
 						htmlOutput = "<h2 class='title'>" + bundle.getString("result.wellDone") + "</h2>" +
 								"<p>" + bundle.getString("result.youDidIt") + "<br />" +
 								bundle.getString("result.resultKey") + " <a>" +
-									Hash.generateUserSolution(
-											Getter.getModuleResultFromHash(getServletContext().getRealPath(""), levelHash), 
-											(String)ses.getAttribute("userName"))
-								+"</a>";
+									
+											Getter.getModuleResultFromHash(getServletContext().getRealPath(""), levelHash) 
+											
+								+ "</a>";
 					}
 					if(validUrl)
 					{

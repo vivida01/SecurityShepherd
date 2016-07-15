@@ -2,5 +2,6 @@
 /dbProcs/
 /i18n/
 /jsp/
+/log4j.properties
 /servlets/
 /utils/

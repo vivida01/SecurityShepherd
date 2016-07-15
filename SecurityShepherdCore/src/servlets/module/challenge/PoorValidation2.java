@@ -93,7 +93,7 @@ public class PoorValidation2 extends HttpServlet
 						+ "<p>" + bundle.getString("poorValidation.orderTotal") + " <a><strong>$" + finalCost + "</strong></a></p>";
 				if (finalCost <= 0 && trollAmount > 0)
 				{
-					htmlOutput += "<br><p>" + bundle.getString("poorValidation.freeTrolls") + " - " + Hash.generateUserSolution(levelSolution, currentUser) + "</p>";
+					htmlOutput += "<br><p>" + bundle.getString("poorValidation.freeTrolls") + " - " + levelSolution + "</p>";
 				}
 			}
 			catch(Exception e)

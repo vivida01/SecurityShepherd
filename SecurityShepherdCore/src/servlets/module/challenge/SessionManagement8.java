@@ -95,7 +95,7 @@ public class SessionManagement8 extends HttpServlet
 					{
 						log.debug("Super User Cookie detected");
 						// Get key and add it to the output
-						String userKey = Hash.generateUserSolution(Getter.getModuleResultFromHash(getServletContext().getRealPath(""), levelHash), (String)ses.getAttribute("userName"));
+						String userKey = Getter.getModuleResultFromHash(getServletContext().getRealPath(""), levelHash);
 						htmlOutput = "<h2 class='title'>" + bundle.getString("response.superUserClub") + "</h2>" +
 								"<p>" +
 								bundle.getString("response.welcomeSuperUser") + " " +

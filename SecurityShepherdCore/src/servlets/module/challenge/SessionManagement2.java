@@ -114,7 +114,7 @@ public class SessionManagement2 extends HttpServlet
 				{
 					log.debug("Successful Login");
 					// Get key and add it to the output
-					String userKey = Hash.generateUserSolution(Getter.getModuleResultFromHash(ApplicationRoot, levelHash), (String)ses.getAttribute("userName"));
+					String userKey = Getter.getModuleResultFromHash(ApplicationRoot, levelHash);
 					htmlOutput = "<h2 class='title'>" + bundle.getString("response.welcome") + " " + encoder.encodeForHTML(resultSet.getString(1)) + "</h2>" +
 							"<p>" +
 							bundle.getString("response.resultKey") + " <a>" + userKey + "</a>" +
